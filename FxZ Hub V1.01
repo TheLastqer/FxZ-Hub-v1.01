@@ -63,5 +63,5 @@ OrionLib:MakeNotification({
 	Name = "Dont Be silly Just Join The discord",
 	Content = "",
 	Image = "rbxassetid://4483345998",
-	Time = 10000
+	Time = 100000
 })
