@@ -58,3 +58,10 @@ if FreeSpinEvent then
 end
   	end    
 })
+
+OrionLib:MakeNotification({
+	Name = "Dont Be silly Just Join The discord",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
