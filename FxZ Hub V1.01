@@ -1,0 +1,60 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "FxZ Hub V1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local Tab = Window:MakeTab({
+        Name = "Main",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Join A Discord if you want to support me",
+        Callback = function()
+            setclipboard("https://discord.gg/f9CEfBPJ")
+            OrionLib:MakeNotification({
+                Name = "Discord Link Copied",
+                Content = "The Discord link has been copied to your clipboard.",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end    
+    })
+
+    Tab:AddButton({
+	Name = "Infinite Cash",
+	Callback = function()
+      		print("button pressed")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local GiveCashEvent = ReplicatedStorage.Remotes:FindFirstChild("GiveCashEvent")
+
+if GiveCashEvent then
+    GiveCashEvent:FireServer(1000000)
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Gems",
+	Callback = function()
+      		print("button pressed")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local GemEvent = ReplicatedStorage.Remotes:FindFirstChild("GemEvent")
+
+if GemEvent then
+    GemEvent:FireServer(10000000)
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Free Spin",
+	Callback = function()
+      		print("button pressed")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local FreeSpinEvent = ReplicatedStorage.Remotes:FindFirstChild("FreeSpinEvent")
+
+if FreeSpinEvent then
+    FreeSpinEvent:FireServer(1000)
+end
+  	end    
+})
